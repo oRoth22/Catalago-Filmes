@@ -67,9 +67,8 @@ export const Movie = styled.li`
     }
     span {
         font-weight: bold;
-        font-size: 100%;
+        font-size: 120%;
         text-align: center;
-        padding-left: 1vw;
         padding-rigth: 1vw;
         padding-bottom: 1vh;
     }
