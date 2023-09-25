@@ -10,39 +10,28 @@ const Movie = () => {
     const [movie, setMovie] = useState([]);
     const KEY = process.env.REACT_APP_KEY;
     useEffect(() => {
-        fetch(
-            `https://api.themoviedb.org/3/movie/popular?api_key=${KEY}&language=pt-BR`
-        )
+        const imagePath = "https://image.tmdb.org/t/p/w500";
+        const KEY = process.env.REACT_APP_KEY;
+        fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${KEY}&language=pt-BR`)
             .then((response) => response.json())
             .then((data) => {
-                const res = data.results;
-                let filme = res.find((key) => {
-                    // eslint-disable-next-line
-                    return key.id == id;
-                });
-                setMovie(filme);
-            }); // eslint-disable-next-line
-    }, []);
+                setMovie(data);
+            });
+    }, [id]);
 
     return (
-        <div>
-            <nav>
-                <h1>Movie</h1>
-            </nav>
+        <div className="fundo">
             <img
-                className="img_movie"
-                src={`${imagePath}${movie.poster_path}`}
-                alt="{movie.title}"
-            />
-            <div className="container">
+                className="img_movie" src={`${imagePath}${movie.poster_path}`} alt="{movie.title}"/>
+            <div className="movie-details">
                 <h1>{movie.title}</h1>
                 <h3>Data de lançamento: {movie.release_date}</h3>
                 <div className="descricao">
-                    <h4>Descrição: </h4>
-                    <p className="movie-desc">{movie.overview}</p>
+                <h4>Descrição: </h4>
+                <p className="movie-desc">{movie.overview}</p>
                 </div>
                 <Link to="/">
-                    <button className="link_button">Voltar</button>
+                <button className="link_button">Voltar</button>
                 </Link>
             </div>
         </div>

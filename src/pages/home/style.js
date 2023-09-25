@@ -1,11 +1,39 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-    padding: 2rem;
+export const Container = styled.div` 
+    height: 7vh;   
 
-    h1 {
-        text-align: center;
-        margin: 4rem 0;
+    .header {
+        padding-top: 3vh !important;
+        display: flex !important; 
+        align-items: center !important;
+        margin-bottom: 40px;
+        padding-bottom: 3vh !important;
+
+        background-color: #2c2c2c; 
+        border-bottom: 5px outset #fff;    
+    }
+    
+    a.navbar-brand{
+        color: #fff;
+        text-decoration: none;
+        font-size: 3vh;
+        font-weight: bold;
+        margin-left: 2vw;
+    }
+    a.navbar-brand:hover {
+        color: #fff;
+    }
+    .form-control{
+        width: 15vw;
+        height: 4.5vh;
+    }
+    .btn-outline-success {
+        color: #fff !important;
+        border-color: #007bff !important;
+    }
+    .btn-outline-success:hover {
+        background-color: #007bff !important;
     }
 `;
 
@@ -22,6 +50,16 @@ export const Movie = styled.li`
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    border: 5px outset #9c9c9c;
+    padding-bottom: 2vh;
+    padding-top: 2vh;
+    border-radius: 20px;
+    transition: transform 0.3s; 
+
+    &:hover {
+        transform: scale(1.1); 
+    }
+
     img {
         width: 180px;
         border-radius: 1rem;
@@ -29,8 +67,11 @@ export const Movie = styled.li`
     }
     span {
         font-weight: bold;
-        font-size: 120%;
+        font-size: 100%;
         text-align: center;
+        padding-left: 1vw;
+        padding-rigth: 1vw;
+        padding-bottom: 1vh;
     }
     a {
         transition: all 0.3s;
@@ -45,10 +86,11 @@ export const Btn = styled.button`
     padding: 0.7rem 3rem;
     border: none;
     border-radius: 15px;
-    color: #212121;
-    background-color: #ffffff;
-    font-weight: 1000;
+    color: #ffff;
+    background-color: #3E7786;
+    border: 2px outset #007bff;
+    font-weight: 800;
     font-size: 12 px;
     cursor: pointer;
-    transition: all 250ms;
+    transition: all 300ms;
 `;

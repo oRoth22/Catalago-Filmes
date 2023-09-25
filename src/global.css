@@ -6,7 +6,8 @@
 }
 
 body {
-  background-color: black;
+  background: radial-gradient(circle, #3c3c3c, black);
+  background-size: cover;
   color: white;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
