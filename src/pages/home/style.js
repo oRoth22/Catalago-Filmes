@@ -35,14 +35,70 @@ export const Container = styled.div`
     .btn-outline-success:hover {
         background-color: #007bff !important;
     }
+
+    .titlePOP {
+        font-size: 3vh;
+        font-weight: bold;
+        color: #fff;
+        margin-bottom: 3vh;
+        margin-left: 44vw !important;
+    }
+
+    .titleFilmes {
+        font-size: 3vh;
+        font-weight: bold;
+        color: #fff;
+        margin-left: 44vw !important;
+        margin-top: 4vh;
+    }
+
+    .carousel {
+        margin-top: 20px;
+        border: 5px outset #9c9c9c;
+        border-radius: 20px;
+        overflow: hidden;
+      }
+
+      #carouselExampleCaptions{
+        margin-left: 10vw;
+        margin-right: 10vw;
+      }
+      
+      .carousel img {
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 1rem;
+        height: 60vh;
+      }
+      
+      /* Estilo para as legendas do carousel */
+      .carousel-caption {
+        background-color: rgba(0, 0, 0, 0);
+        color: white;
+      }
+      
+      /* Estilo para os controles do carousel */
+      .carousel-control-prev,
+      .carousel-control-next {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 24px;
+        color: white;
+        margin-top: 30vh;
+      }
 `;
 
 export const MovieList = styled.ul`
+    padding-top: 5vh;
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
     column-gap: 3rem;
     row-gap: 4rem;
+    padding-left: none;
+    padding-right: 2vh;
 `;
 
 export const Movie = styled.li`
